@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=opensans:wght@200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
 
 * {
   box-sizing: border-box;
@@ -7,9 +7,9 @@
 }
 
 body {
-  background-color: slategray;
+  background-color: rgb(148, 196, 255);
   overflow: scroll;
-  font-family: "open sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +26,7 @@ body {
 }
 
 canvas {
-  border: 2px solid steelblue;
+  border: 4px solid rgb(203, 149, 253);
   width: 70vw;
   max-width: 600px;
   height: 70vh;
@@ -34,8 +34,8 @@ canvas {
 }
 
 .toolbox {
-  background-color: steelblue;
-  border: 2px solid steelblue;
+  background-color: rgb(203, 149, 253);
+  border: 2px solid rgb(203, 149, 253);
   display: flex;
   width: 70vw;
   max-width: 600px;
@@ -43,7 +43,7 @@ canvas {
 }
 
 .toolbox > * {
-  background-color: #fff;
+  background-color: #e9e9e9;
   border: none;
   display: inline-flex;
   align-items: center;
@@ -61,8 +61,11 @@ canvas {
 
 .toolbox > *:last-child {
   margin-left: auto;
-  background-color: #f5f5f5;
+  background-color: #e9e9e9;
   cursor: pointer;
+  width: auto;
+  font-size: 1.25rem;
+  font-family: inherit;
 }
 
 h2 {
