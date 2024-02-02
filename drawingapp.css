@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;400&display=swap");
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -12,21 +15,32 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  width: 100vw;
   margin: 0;
 }
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 canvas {
   border: 2px solid steelblue;
-  width: 100%; /* Ensure canvas takes full width */
-  height: 70vh; /* Set initial height to maintain aspect ratio */
+  width: 70vw;
+  max-width: 600px;
+  height: 70vh;
 }
+
 .toolbox {
   background-color: steelblue;
   border: 1px solid slateblue;
   display: flex;
-  width: 603px;
+  width: 90%;
+  max-width: 600px;
   padding: 1rem;
 }
+
 .toolbox > * {
   background-color: #fff;
   border: none;
@@ -43,24 +57,30 @@ canvas {
   cursor: pointer;
   font-weight: 600;
 }
+
 .toolbox > *:last-child {
   margin-left: auto;
   background-color: #f5f5f5;
   cursor: pointer;
 }
+
 h2 {
   font-size: 18px;
   font-weight: 400;
   margin: 20px 0 0 0;
   color: #333;
 }
+
 @media (max-width: 700px) {
+  canvas {
+    width: 90%;
+    height: calc(70vw - 40px);
+  }
+
   .toolbox {
     width: 90%;
   }
-  canvas {
-    height: calc(70vh - 40px); /* Adjusted height using calc expression */
-  }
+
   .toolbox > * {
     font-size: 1.5rem;
     height: 30px;

@@ -7,6 +7,10 @@ const clearEl = document.getElementById("clear");
 
 const ctx = canvas.getContext("2d");
 
+const pixelRatio = window.devicePixelRatio || 1;
+canvas.width = canvas.offsetWidth * pixelRatio;
+canvas.height = canvas.offsetHeight * pixelRatio;
+ctx.scale(pixelRatio, pixelRatio);
 let size = 10;
 let isDrawing = false;
 let color = "black";
@@ -72,6 +76,7 @@ function drawLine(x1, y1, x2, y2) {
   ctx.lineTo(x2, y2);
   ctx.strokeStyle = color;
   ctx.lineWidth = size * 2;
+  ctx.lineCap = "round";
   ctx.stroke();
 }
 
